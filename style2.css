@@ -279,7 +279,7 @@ header .search-bar-container label:hover{
   top:10rem;
 }
 
-.home .controls .vid-btn{
+/* .home .controls .vid-btn{
   height:2rem;
   width:2rem;
   display: inline-block;
@@ -291,7 +291,7 @@ header .search-bar-container label:hover{
 
 .home .controls .vid-btn.active{
   background:var(--orange);
-}
+} */
 
 .book .row{
   display: flex;
