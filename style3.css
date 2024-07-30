@@ -188,5 +188,9 @@ top: 0;
     .contact .row form .inputBox input{
       width:100%;
     }
+.register-form-container{
+  background-image: url(images/r2.jpg);
+  background-size: cover;
+}
   
   }
