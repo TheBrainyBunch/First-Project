@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saferper</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div class="register-form-container">
+
+    <i class="fas fa-times1" id="form-close1"></i>
+
+    <form action="register.php" method="post" onsubmit="return registe()" name="regis">
+     <h3>Register Now</h3>
+
+     <input type="email" class="box" placeholder="enter your email" name="email" required>
+     <input type="password" class="box" placeholder="enter your password" name="password" required>
+     <input type="password" class="box" placeholder="confirm password" name="cpassword" required>
+     <input type="submit" value="register now" class="btn1" name="login">
+     <p>already have an account? <a href="index.html">login now!</a></p>
+    </form>
+</div>
+<script>
+    function registe()
+    {
+     let y = document.forms["regis"]["password"].value;
+
+     if(y.length<=5)
+      {alert("Please enter atleast 6 values");
+        return false;
+      }  
+
+   }
+</script>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body>
+</html>

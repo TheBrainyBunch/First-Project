@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style2.css">
+
+    <style>
+        .packages{
+            
+            padding: 10px 100px;
+        }
+       
+       
+.more .hello{
+  display: flex;
+  flex-wrap: wrap;
+}
+.more .hello .map{
+  flex:0 0 60rem;
+  margin: 10px;
+}
+.more .hello .map iframe{
+  width:100%;
+}
+
+.more .hello .he{
+  margin: 10px;
+  flex:0 0 60rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(123, 41, 41, 0.1);
+  border-radius: .5rem;
+  background: #ffeded;
+  padding-inline-start: 16px;
+  width: 220px;
+  overflow: hidden;
+  transition: .6s;
+  transform: translate(0);
+  font-weight: 400;
+}
+.more .hello .he:hover{
+  color: rgb(255, 255, 255);
+}
+
+.more .hello .he::before{
+    content: '';
+    position: absolute;
+    top: -75px;
+    z-index: -1;
+    left: -45px ;
+    background: linear-gradient(to right, rgb(143, 6, 235),rgb(193, 69, 255));
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: .6s;
+}
+.more .hello .he:hover::before{
+    transform: scale(5.5);
+    
+}
+
+.more .hello .he h1{
+    font-size: 20px;
+    padding-right: 15rem;
+}
+.more .hello .he h1:hover{
+    font-size:25px;
+}
+#mame{
+    accent-color:green;
+}
+@media (max-width:1200px){
+    
+    html{
+        font-size: 55%;
+    }
+    .more .hello .he h1{
+        font-size: 17px;
+    }
+}
+
+@media (max-width:991px){
+    
+    header{
+        padding:2rem;
+    }
+    
+    section{
+        padding:2rem;
+    }
+    .more .hello .map{
+    flex: 0 0 55rem;
+}
+
+.more .hello .he{
+    flex:0 0 55rem;
+}
+    .more .hello .he h1{
+        font-size: 17px;
+    }
+    .more .hello .he:hover::before{
+        transform: scale(4.6);
+        
+    }
+
+}
+
+@media (max-width:768px){
+    
+    #menu-bar{
+        display: initial;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top:100%; right:0; left: 0;
+        background: #333;
+        border-top: .1rem solid rgba(255,255,255,.2);
+        padding:1rem 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    header .navbar a{
+        display: block;
+        border-radius: .5rem;
+        padding:1.5rem;
+        margin:1.5rem 0;    
+        background:#222;
+    }
+    .more .hello .map{
+    flex: 0 0 47rem;
+}
+
+.more .hello .he{
+    flex:0 0 47rem;
+}
+    .more .hello .he h1{
+        font-size: 17px;
+    }
+    .more .hello .he:hover::before{
+        transform: scale(4.5);
+
+}
+}
+
+@media (max-width:450px){
+    
+    html{
+        font-size: 50%;
+    }
+    
+    .heading span{
+        font-size: 2.5rem;
+    }
+    
+    .contact .row form .inputBox input{
+        width:100%;
+    }
+    .more .hello .map{
+    flex: 0 0 35rem;
+}
+
+.more .hello .he{
+    flex:0 0 35rem;
+}
+    .more .hello .he h1{
+  font-size: 10px;
+ }
+ .more .hello .he h1{
+    font-size:13px;
+ }
+}
+    </style>
+<script>(function(w, d) 
+    { w.CollectId = "63f5efb624202a545dd93a46"; var h = d.head || d.getElementsByTagName("head")[0]; 
+    var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true;
+     s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);
+     </script>
+</head>
+<body>
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+    
+        <a href="#" class="logo"><span>Safer</span>per</a>
+    
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">book</a>
+            <a href="index.html">packages</a>
+            <a href="index.html">services</a>
+            <a href="index.html">gallery</a>
+            <a href="index.html">review</a>
+            <a href="index.html">contact</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+    
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    
+    </header>
+    <!-- header section ends -->
+
+<!-- login form container  -->
+
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="Login.php" method="post" onsubmit="return log()" name="form1" id="f1">
+        <h3>login</h3>
+      
+        <input type="email" class="box" placeholder="enter your email" name="email" required>
+        <input type="password" class="box" placeholder="enter your password" name="password" required>
+        <input type="submit" value="login now" class="btn" name="login">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+       <!-- <p>forget password? <a href="#">click here</a></p>-->
+        <p>don't have any account? <a href="register.html">register now</a></p>
+    </form>
+
+</div>
+
+<!--Pakages 1 details start-->
+<section class="packages" style="padding-top: 100px;">
+
+    <div class="box-container" >
+
+<div class="box">
+    <img src="images/Abu.webp" alt="" width="300px" height="300px">
+    <img src="images/Great.webp" alt="" width="300px" height="300px">
+    <div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Abu Simbel Temples</h3>
+    <p>Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel, Aswan Governorate, 
+        Upper Egypt, near the border with Sudan.
+         It is situated on the western bank of Lake Nasser, about 230 km southwest of Aswan.</p>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+    </div>
+</div>
+<a href="#book" class="btn">Book Now</a>
+
+</div>
+
+    <div class="box">
+        <img src="images/morning.jpg" alt="" width="300px" height="300px">
+        <img src="images/KV2.jpg" alt="" width="300px" height="300px">
+        <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Valley of the Kings</h3>
+        <p>The Valley of the Kings, also known as the Valley of the Gates of the Kings, is a valley in 
+            Egypt where, for a period of nearly 500 years from the 16th to 11th century BC, 
+            rock-cut tombs were excavated for the pharaohs and powerful nobles of the New Kingdom.</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <a href="#book" class="btn">Book Now</a>
+
+    </div>
+
+    <div class="box">
+        <img src="images/sta.webp" alt="" width="300px" height="300px">
+        <img src="images/Luxor.webp" alt="" width="300px" height="300px">
+        <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Luxor Temple</h3>
+        <p>The Luxor Temple is a large Ancient Egyptian temple complex located on the east bank of the Nile River in the 
+            city today known as Luxor and was constructed approximately 1400 BCE. In the Egyptian language it
+             was known as ipet resyt, "the southern sanctuary".</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <a href="#book" class="btn">Book Now</a>
+
+    </div>
+
+    <div class="box">
+        <img src="images/bc.webp" alt="" width="300px" height="300px">
+        <img src="images/f4.webp" alt=""width="300px" height="300px">
+        <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Khan el-Khalili</h3>
+        <p>Khan el-Khalili is a famous bazaar and souq in the historic center of Cairo, Egypt. 
+            Established as a center of trade in the Mamluk era and named for one of its several historic caravanserais, 
+            the bazaar district has since become one of Cairo's main attractions for tourists and Egyptians alike.</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <a href="#book" class="btn">Book Now</a>
+
+    </div>
+
+    <div class="box">
+        <img src="images/jpg.webp" alt="" width="300px" height="300px">
+        <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Great Sphinx of Giza</h3>
+        <p>The Great Sphinx of Giza is a limestone statue of a reclining sphinx, a mythical creature with the head of a human. </p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <a href="index.html" class="btn">Book Now</a>
+
+    </div>
+
+    <div class="box">
+        <img src="images/egypt.jpg" alt="" width="300px" height="300px">
+        <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Karnak</h3>
+        <p>The Karnak Temple Complex, commonly known as Karnak, comprises a vast mix of decayed temples, pylons, and other buildings near Luxor, Egypt.</p>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+        </div>
+    </div>
+    <a href="#book" class="btn">Book Now</a>
+
+    </div>
+</div>
+</section>
+<section class="book" id="book">
+
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/book-img.svg" alt="">
+        </div>
+
+        <form action="Book now.php" method="post" name="form2" onsubmit="return book()">
+            <div class="inputBox" >
+                <h3>Your Location</h3>
+                <input type="text" placeholder="Journey start point" name="location" required>
+            </div>
+            <div class="inputBox" >
+                <h3>Destiny</h3>
+                <input type="text" placeholder="Favourite point" name="Whereto" required>
+            </div>
+            <div class="inputBox">
+                <h3>how many</h3>
+                <input type="number" placeholder="number of guests" name="Howmany">
+            </div>
+            <div class="inputBox">
+                <h3>AADHAR Number</h3>
+                <input type="number" placeholder="aadhar card number" name="aadhar" required>
+            </div>
+            <div class="inputBox">
+                <h3>arrivals</h3>
+                <input type="date" name="Arrivals">
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input type="date" name="Leaving">
+            </div>
+                
+            <input type="submit" class="btn" value="book now">
+        </form>
+
+    </div>
+
+
+</section>
+
+<section class="more">
+<h1 class="heading" >
+    <span>M</span>
+    <span>o</span>
+    <span>r</span>
+    <span>e</span>
+    <span class="space"></span>
+    <span>p</span>
+    <span>l</span>
+    <span>a</span>
+    <span>c</span>
+    <span>e</span>
+</h1>
+<div class="hello">
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618734.4109690823!2d30.71204245275089!3d27.657936734905903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2sEgy
+    pt!5e0!3m2!1sen!2sin!4v1676568793058!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<div class="he" >
+        
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Valley of the Kings</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Pyramids of Giza</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Islamic Cairo</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Citadel of Saladin</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Aswan</h1>
+    <br>
+    <h1 style="color: rgb(22, 22, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Rock Temples of Abu Simbel</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Egyptian Museum</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> White Desert</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Abydos</h1>
+    <br>
+    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" style="color:#ffa500;"></i> Ras Muhammad National Park</h1>
+  </div>
+
+</div>
+
+</section>
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Customer Support, Payment Security, Privacy Policy, User Agreement, Terms of Service, More Offices, Make A Payment, Work From Home</p>
+        </div>
+        <div class="box">
+            <h3>Our Address</h3>
+            <a href="#"><i class="fas fa-map"></i> Rajasthan,india</a>
+            <a href="#"><i class="fas fa-phone"></i> 9414596891</a>
+            <a href="#"><i class="fas fa-envelope"></i> khushalmdeora@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html">home</a>
+            <a href="index.html">book</a>
+            <a href="index.html">packages</a>
+            <a href="index.html">services</a>
+            <a href="index.html">gallery</a>
+            <a href="index.html">review</a>
+            <a href="index.html">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span> mr. khushal Deora </span> | all rights reserved! </h1>
+
+</section>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script2.js"></script>
+</body>
+</html>
