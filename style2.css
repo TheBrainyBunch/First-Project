@@ -607,7 +607,7 @@ header .search-bar-container label:hover{
   color:var(--orange);
 }
 
-/* chat box*/
+/* chat box
 .chat-icon{
   position:fixed;
   right: 30px;
@@ -648,7 +648,7 @@ header .search-bar-container label:hover{
 
 #messages{
   padding:6px ;
-}
+} */
 
 
 
@@ -671,9 +671,9 @@ header .search-bar-container label:hover{
   html{
     font-size: 55%;
   }
-  .more .hello .he h1{
+  /* .more .hello .he h1{
     font-size: 19px;
-   }
+   } */
 }
 
 @media (max-width:991px){
@@ -685,13 +685,13 @@ header .search-bar-container label:hover{
   section{
     padding:2rem;
   }
-  .more .hello .he h1{
+  /* .more .hello .he h1{
     font-size: 19px;
    }
    .more .hello .he:hover::before{
     transform: scale(4.6);
   
-   }
+   } */
 
 }
 
@@ -721,19 +721,22 @@ header .search-bar-container label:hover{
     margin:1.5rem 0;    
     background:#222;
   }
- .more .hello .he h1{
+ /* .more .hello .he h1{
   font-size: 17px;
  }
  .more .hello .he:hover::before{
   transform: scale(4.5);
 
- }
+ } */
 }
 
 @media (max-width:450px){
 
   html{
     font-size: 50%;
+  }
+  .home{
+    padding: 0 10px;
   }
 
   .heading span{
@@ -743,7 +746,4 @@ header .search-bar-container label:hover{
   .contact .row form .inputBox input{
     width:100%;
   }
-  .more .hello .he h1{
-    font-size: 10px;
-   }
 }
