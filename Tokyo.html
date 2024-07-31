@@ -1,367 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css" />
 
     <style>
-.packages{
-  padding: 10px 100px;
-}
-       
-      
-.more .hello{
-  display: flex;
-  flex-wrap: wrap;
-}
-.more .hello .map{
-  flex:0 0 60rem;
-  margin: 10px;
+      .packages {
+        padding: 10px 100px;
+      }
 
-}
-.more .hello .map iframe{
-  width:100%;
-}
-.more .hello .he{
-  margin: 10px;
-  flex:0 0 60rem;
-  padding:2rem;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-  border-radius: .5rem;
-  background:#ffeded;
-  padding-inline-start: 16px;
-  width: 220px;
-  overflow: hidden;
-  transition: .6s;
-  transform: translate(0);
-  font-weight: 400;
-}
-.more .hello .he:hover{
-  color: rgb(255, 255, 255);
-}
+      .more .hello {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .more .hello .map {
+        flex: 0 0 60rem;
+        margin: 10px;
+      }
+      .more .hello .map iframe {
+        width: 100%;
+      }
 
-.more .hello .he h1:hover{
-    font-size:25px;
-}
+      #mas{
+        color: #ffa500;
+      }
 
-.more .hello .he::before{
-  content: '';
-  position: absolute;
-  top: -75px;
-  z-index: -1;
-  left: -45px ;
-  background: linear-gradient(to right, rgb(143, 6, 235),rgb(193, 69, 255));
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  transition: .6s;
-}
-.more .hello .he:hover::before{
-  transform: scale(5.5);
+      .more .hello .he {
+        margin: 10px;
+        flex: 0 0 60rem;
+        padding: 2rem;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        background: #ffeded;
+        padding-inline-start: 16px;
+        width: 220px;
+        overflow: hidden;
+        transition: 0.6s;
+        transform: translate(0);
+        font-weight: 400;
+      }
+      .more .hello .he:hover {
+        color: rgb(255, 255, 255);
+      }
 
-}
+      .more .hello .he h1:hover {
+        font-size: 25px;
+      }
 
-.more .hello .he h1{
-  font-size: 20px;
-  padding-right: 15rem;
-}
-        #mame{
-        accent-color:green;
-       }
-       @media (max-width:1200px){
+      .more .hello .he::before {
+        content: "";
+        position: absolute;
+        top: -75px;
+        z-index: -1;
+        left: -45px;
+        background: linear-gradient(
+          to right,
+          rgb(143, 6, 235),
+          rgb(193, 69, 255)
+        );
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        transition: 0.6s;
+      }
+      .more .hello .he:hover::before {
+        transform: scale(5.5);
+      }
 
-html{
-  font-size: 55%;
-}
+      .more .hello .he h1 {
+        font-size: 20px;
+        padding-right: 15rem;
+      }
+      #mame {
+        accent-color: green;
+      }
+      @media (max-width: 1200px) {
+        html {
+          font-size: 55%;
+        }
 
-.more .hello .he h1{
-  font-size: 19px;
- }
-}
+        .more .hello .he h1 {
+          font-size: 19px;
+        }
+      }
 
-@media (max-width:991px){
+      @media (max-width: 991px) {
+        header {
+          padding: 2rem;
+        }
 
-header{
-  padding:2rem;
-}
+        section {
+          padding: 2rem;
+        }
+        .more .hello .map {
+          flex: 0 0 55rem;
+        }
 
-section{
-  padding:2rem;
-}
-.more .hello .map{
-    flex: 0 0 55rem;
-}
+        .more .hello .he {
+          flex: 0 0 55rem;
+        }
 
-.more .hello .he{
-    flex:0 0 55rem;
-}
+        .more .hello .he h1 {
+          font-size: 19px;
+        }
+        .more .hello .he:hover::before {
+          transform: scale(3.7);
+        }
+      }
 
-.more .hello .he h1{
-  font-size: 19px;
- }
- .more .hello .he:hover::before{
-  transform: scale(3.7);
+      @media (max-width: 768px) {
+        #menu-bar {
+          display: initial;
+        }
 
- }
+        header .navbar {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          background: #333;
+          border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+          padding: 1rem 2rem;
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
 
-}
+        header .navbar.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
 
-@media (max-width:768px){
+        header .navbar a {
+          display: block;
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          margin: 1.5rem 0;
+          background: #222;
+        }
+        .more .hello .map {
+          flex: 0 0 47rem;
+        }
+        .more .hello .he {
+          flex: 0 0 47rem;
+        }
+        .more .hello .he h1 {
+          font-size: 20px;
+        }
+        .more .hello .he:hover::before {
+          transform: scale(2.7);
+        }
+      }
 
-#menu-bar{
-  display: initial;
-}
+      @media (max-width: 450px) {
+        html {
+          font-size: 50%;
+        }
 
-header .navbar{
-  position: absolute;
-  top:100%; right:0; left: 0;
-  background: #333;
-  border-top: .1rem solid rgba(255,255,255,.2);
-  padding:1rem 2rem;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-
-header .navbar.active{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-header .navbar a{
-  display: block;
-  border-radius: .5rem;
-  padding:1.5rem;
-  margin:1.5rem 0;    
-  background:#222;
-}
-.more .hello .map{
-    flex: 0 0 47rem;
-}
-.more .hello .he{
-    flex: 0 0 47rem;
-}
-.more .hello .he h1{
-font-size: 20px;
-}
-.more .hello .he:hover::before{
-transform: scale(2.7);
-
-}
-}
-
-@media (max-width:450px){
-
-html{
-  font-size: 50%;
-}
-
-.heading span{
-  font-size: 2.5rem;
-}
-.contact .row form .inputBox input{
-  width:100%;
-}
-.more .hello .map{
-    flex: 0 0 35rem;
-}
-.more .hello .he{
-    flex: 0 0 35rem;
-}
-#mas{
-        position:relative;
-        font-size: 100%;
-        color:#ffa500;
-    }
-    #mas2{
-        padding: 15px;
-    }
-    .more .hello .he h1{
-  font-size: 11px;
- }
- .more .hello .he h1:hover{
-    font-size:13px;
- }
-}
+        .heading span {
+          font-size: 2.5rem;
+        }
+        .contact .row form .inputBox input {
+          width: 100%;
+        }
+        .more .hello .map {
+          flex: 0 0 35rem;
+        }
+        .more .hello .he {
+          flex: 0 0 35rem;
+        }
+        #mas {
+          position: relative;
+          font-size: 100%;
+        }
+        #mas2 {
+          padding: 15px;
+        }
+        .more .hello .he h1 {
+          font-size: 11px;
+        }
+        .more .hello .he h1:hover {
+          font-size: 13px;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
 
-        <div id="menu-bar" class="fas fa-bars"></div>
-    
-        <a href="#" class="logo"><span>Safer</span>per</a>
-    
-        <nav class="navbar">
-            <a href="index.html">home</a>
-            <a href="index.html">book</a>
-            <a href="index.html">packages</a>
-            <a href="index.html">services</a>
-            <a href="index.html">gallery</a>
-            <a href="index.html">review</a>
-            <a href="index.html">contact</a>
-        </nav>
-    
-        <div class="icons">
-            <i class="fas fa-search" id="search-btn"></i>
-            <i class="fas fa-user" id="login-btn"></i>
-        </div>
-    
-        <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="search here...">
-            <label for="search-bar" class="fas fa-search"></label>
-        </form>
-    
+      <a href="#" class="logo"><span>Safer</span>per</a>
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="index.html">book</a>
+        <a href="index.html">packages</a>
+        <a href="index.html">services</a>
+        <a href="index.html">gallery</a>
+        <a href="index.html">contact</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here..." />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
     </header>
     <!-- header section ends -->
 
-<!-- login form container  -->
+    <!-- login form container  -->
 
+    <div class="login-form-container">
+      <i class="fas fa-times" id="form-close"></i>
 
-<div class="login-form-container">
-
-    <i class="fas fa-times" id="form-close"></i>
-
-    <form action="Login.php" method="post" onsubmit="return log()" name="form1" id="f1">
+      <form
+        action="Login.php"
+        method="post"
+        onsubmit="return log()"
+        name="form1"
+        id="f1"
+      >
         <h3>login</h3>
-      
-        <input type="email" class="box" placeholder="enter your email" name="email" required>
-        <input type="password" class="box" placeholder="enter your password" name="password" required>
-        <input type="submit" value="login now" class="btn" name="login">
-        <input type="checkbox" id="remember">
+
+        <input
+          type="email"
+          class="box"
+          placeholder="enter your email"
+          name="email"
+          required
+        />
+        <input
+          type="password"
+          class="box"
+          placeholder="enter your password"
+          name="password"
+          required
+        />
+        <input type="submit" value="login now" class="btn" name="login" />
+        <input type="checkbox" id="remember" />
         <label for="remember">remember me</label>
-       <!-- <p>forget password? <a href="#">click here</a></p>-->
+        <!-- <p>forget password? <a href="#">click here</a></p>-->
         <p>don't have any account? <a href="register.html">register now</a></p>
-    </form>
-
-</div>
-
-<!--Pakages 1 details start-->
-<section class="packages" style="padding-top: 100px;" id="mas2">
-
-    <div class="box-container" >
-
-<div class="box">
-    <img src="images/85.jpg" alt="" width="300px" height="300px">
-    <img src="images/senso-ji-temple_optimized.jpg" alt="" width="300px" height="300px">
-    <div class="content">
-    <h3><i class="fas fa-map-marker-alt"></i> Sensō-ji</h3>
-    <p>Sensō-ji is an ancient Buddhist temple located in Asakusa, Tokyo, Japan. It is Tokyo's oldest temple, and one of its most significant. 
-        Formerly associated with the Tendai sect of Buddhism, it became independent after World War II.</p>
-    <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
+      </form>
     </div>
-</div>
-<a href="#book" class="btn">Book Now</a>
 
-</div>
-
-    <div class="box">
-        <img src="images/meiji-jingu.jpg" alt="" width="300px" height="300px">
-        <img src="images/Meiji-shrine.jpg" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Meiji Jingu</h3>
-        <p>Meiji Shrine, is a Shinto shrine in Shibuya, Tokyo, that is dedicated to the deified spirits of Emperor Meiji and his wife, Empress Shōken. 
-            The shrine does not contain the emperor's grave, which is located at Fushimi-momoyama, south of Kyoto.</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+    <!--Pakages 1 details start-->
+    <section class="packages" style="padding-top: 100px" id="mas2">
+      <div class="box-container">
+        <div class="box">
+          <img src="images/85.jpg" alt="" width="300px" height="300px" />
+          <img
+            src="images/senso-ji-temple_optimized.jpg"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Sensō-ji</h3>
+            <p>
+              Sensō-ji is an ancient Buddhist temple located in Asakusa, Tokyo,
+              Japan. It is Tokyo's oldest temple, and one of its most
+              significant. Formerly associated with the Tendai sect of Buddhism,
+              it became independent after World War II.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/Tokyo-Tower-.jpg" alt="" width="300px" height="300px">
-        <img src="images/TokyoTower.jpg" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Tokyo Tower</h3>
-        <p>The Tokyo Tower is a communications and observation tower in the Shiba-koen district of Minato,
-             Tokyo, Japan, built in 1958. At 332.9 meters, it is the second-tallest structure in Japan. The structure is an Eiffel Tower-inspired lattice tower.</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img
+            src="images/meiji-jingu.jpg"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <img
+            src="images/Meiji-shrine.jpg"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Meiji Jingu</h3>
+            <p>
+              Meiji Shrine, is a Shinto shrine in Shibuya, Tokyo, that is
+              dedicated to the deified spirits of Emperor Meiji and his wife,
+              Empress Shōken. The shrine does not contain the emperor's grave,
+              which is located at Fushimi-momoyama, south of Kyoto.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/Tokyo_t.jpg" alt="" width="300px" height="300px">
-        <img src="images/tf.jpg" alt=""width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Tokyo National Museum</h3>
-        <p>The Tokyo National Museum or TNM is an art museum in Ueno Park in the Taitō ward of Tokyo, Japan.
-             It is one of the four museums operated by the National Institutes for Cultural Heritage, is considered the oldest national museum in Japan.</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img
+            src="images/Tokyo-Tower-.jpg"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <img
+            src="images/TokyoTower.jpg"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Tokyo Tower</h3>
+            <p>
+              The Tokyo Tower is a communications and observation tower in the
+              Shiba-koen district of Minato, Tokyo, Japan, built in 1958. At
+              332.9 meters, it is the second-tallest structure in Japan. The
+              structure is an Eiffel Tower-inspired lattice tower.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/fuji.jpg" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Mount Fuji</h3>
-        <p>Mount Fuji is an active stratovolcano that last erupted from 1707 to 1708. 
-            The mountain is located about 100 km (62 mi) southwest of Tokyo and is visible from there on clear days. </p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img src="images/Tokyo_t.jpg" alt="" width="300px" height="300px" />
+          <img src="images/tf.jpg" alt="" width="300px" height="300px" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Tokyo National Museum</h3>
+            <p>
+              The Tokyo National Museum or TNM is an art museum in Ueno Park in
+              the Taitō ward of Tokyo, Japan. It is one of the four museums
+              operated by the National Institutes for Cultural Heritage, is
+              considered the oldest national museum in Japan.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="index.html" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/photo-Tokyo.webp" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Tokyo Skytree</h3>
-        <p>Tokyo Skytree is a broadcasting and observation tower in Sumida, Tokyo. 
-            It became the tallest structure in Japan in 2010 and reached its full height of 634 meters in March 2011.</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img src="images/fuji.jpg" alt="" width="300px" height="300px" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Mount Fuji</h3>
+            <p>
+              Mount Fuji is an active stratovolcano that last erupted from 1707
+              to 1708. The mountain is located about 100 km (62 mi) southwest of
+              Tokyo and is visible from there on clear days.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="index.html" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-</div>
-</section>
-<section class="book" id="book">
-
-    <h1 class="heading">
+        <div class="box">
+          <img
+            src="images/photo-Tokyo.webp"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Tokyo Skytree</h3>
+            <p>
+              Tokyo Skytree is a broadcasting and observation tower in Sumida,
+              Tokyo. It became the tallest structure in Japan in 2010 and
+              reached its full height of 634 meters in March 2011.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+    <section class="book" id="book">
+      <h1 class="heading">
         <span>b</span>
         <span>o</span>
         <span>o</span>
@@ -370,131 +427,177 @@ html{
         <span>n</span>
         <span>o</span>
         <span>w</span>
-    </h1>
+      </h1>
 
-    <div class="row">
-
+      <div class="row">
         <div class="image">
-            <img src="images/book-img.svg" alt="">
+          <img src="images/book-img.svg" alt="" />
         </div>
 
-        <form action="Book now.php" method="post" name="form2" onsubmit="return book()" >
-            <div class="inputBox" >
-                <h3>Your Location</h3>
-                <input type="text" placeholder="Journey start point" name="location" required>
-            </div>
-            <div class="inputBox" >
-                <h3>Destiny</h3>
-                <input type="text" placeholder="Favourite point" name="Whereto" required>
-            </div>
-            <div class="inputBox">
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests" name="Howmany" required>
-            </div>
-            <div class="inputBox">
-                <h3>AADHAR Number</h3>
-                <input type="number" placeholder="aadhar card number" name="aadhar" required>
-            </div>
-            <div class="inputBox">
-                <h3>arrivals</h3>
-                <input type="date" name="Arrivals" required>
-            </div>
-            <div class="inputBox">
-                <h3>leaving</h3>
-                <input type="date" name="Leaving" required> 
-                </div>
-            <input type="submit" class="btn" value="book now">
+        <form
+          action="Book now.php"
+          method="post"
+          name="form2"
+          onsubmit="return book()"
+        >
+          <div class="inputBox">
+            <h3>Your Location</h3>
+            <input
+              type="text"
+              placeholder="Journey start point"
+              name="location"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>Destiny</h3>
+            <input
+              type="text"
+              placeholder="Favourite point"
+              name="Whereto"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>how many</h3>
+            <input
+              type="number"
+              placeholder="number of guests"
+              name="Howmany"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>AADHAR Number</h3>
+            <input
+              type="number"
+              placeholder="aadhar card number"
+              name="aadhar"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>arrivals</h3>
+            <input type="date" name="Arrivals" required />
+          </div>
+          <div class="inputBox">
+            <h3>leaving</h3>
+            <input type="date" name="Leaving" required />
+          </div>
+          <input type="submit" class="btn" value="book now" />
         </form>
+      </div>
+    </section>
 
-    </div>
-</section>
+    <section class="more">
+      <h1 class="heading">
+        <span>M</span>
+        <span>o</span>
+        <span>r</span>
+        <span>e</span>
+        <span class="space"></span>
+        <span>p</span>
+        <span>l</span>
+        <span>a</span>
+        <span>c</span>
+        <span>e</span>
+      </h1>
+      <div class="hello">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d829814.6078986886!2d139.3413452717815!3d35.66559228421431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sin!4v1676567130347!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="he">
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Meiji Shrine
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Mount Fuji
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Nakamise, Asakusa
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Tokyo Skytree
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Akihabara
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Shinjuku Gyoen
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Ghibli Museum
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Sensō-ji
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Tokyo Bay Cruise
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> TeamLab Borderless
+            Tokyo
+          </h1>
+        </div>
+      </div>
+    </section>
 
-<section class="more">
-<h1 class="heading" >
-    <span>M</span>
-    <span>o</span>
-    <span>r</span>
-    <span>e</span>
-    <span class="space"></span>
-    <span>p</span>
-    <span>l</span>
-    <span>a</span>
-    <span>c</span>
-    <span>e</span>
-</h1>
-   <div class="hello">
-<div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d829814.6078986886!2d139.3413452717815!3d35.66559228421431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sin!4v1676567130347!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-<div class="he">
-        
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Meiji Shrine</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Mount Fuji</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Nakamise, Asakusa</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Tokyo Skytree</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Akihabara</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Shinjuku Gyoen</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Ghibli Museum</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Sensō-ji</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Tokyo Bay Cruise</h1>
-  <br>
-  <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> TeamLab Borderless Tokyo</h1>
-</div>
- 
-</div>
-
-</section>
-
-<section class="footer">
-
-    <div class="box-container">
-
+    <section class="footer">
+      <div class="box-container">
         <div class="box">
-            <h3>about us</h3>
-            <p>Customer Support, Payment Security, Privacy Policy, User Agreement, Terms of Service, More Offices, Make A Payment, Work From Home</p>
+          <h3>about us</h3>
+          <p>
+            Customer Support, Payment Security, Privacy Policy, User Agreement,
+            Terms of Service, More Offices, Make A Payment, Work From Home
+          </p>
         </div>
         <div class="box">
-            <h3>Our Address</h3>
-            <a href="#"><i class="fas fa-map"></i> Rajasthan,india</a>
-            <a href="#"><i class="fas fa-phone"></i> 8955921898</a>
-            <a href="#"><i class="fas fa-envelope"></i> khushalmdeora@gmail.com</a>
+          <h3>Our Address</h3>
+          <a href="#"><i class="fas fa-map"></i> Rajasthan,india</a>
+          <a href="#"><i class="fas fa-phone"></i> 8955921898</a>
+          <a href="#"
+            ><i class="fas fa-envelope"></i> khushalmdeora@gmail.com</a
+          >
         </div>
         <div class="box">
-            <h3>quick links</h3>
-            <a href="index.html">home</a>
-            <a href="index.html">book</a>
-            <a href="index.html">packages</a>
-            <a href="index.html">services</a>
-            <a href="index.html">gallery</a>
-            <a href="index.html">review</a>
-            <a href="index.html">contact</a>
+          <h3>quick links</h3>
+          <a href="index.html">home</a>
+          <a href="index.html">book</a>
+          <a href="index.html">packages</a>
+          <a href="index.html">services</a>
+          <a href="index.html">gallery</a>
+          <a href="index.html">contact</a>
         </div>
         <div class="box">
-            <h3>follow us</h3>
-            <a href="#">facebook</a>
-            <a href="#">instagram</a>
-            <a href="#">twitter</a>
-            <a href="#">linkedin</a>
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">instagram</a>
+          <a href="#">twitter</a>
+          <a href="#">linkedin</a>
         </div>
+      </div>
 
-    </div>
+      <h1 class="credit">created by <span> mr. khushal Deora </span></h1>
+    </section>
 
-    <h1 class="credit"> created by <span> mr. khushal Deora </span></h1>
-
-</section>
-
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="script2.js"></script>
-</body>
+    <!-- custom js file link  -->
+    <script src="script2.js"></script>
+  </body>
 </html>

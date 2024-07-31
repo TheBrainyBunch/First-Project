@@ -1,368 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css" />
 
     <style>
-        .packages{
-            
-            padding: 10px 100px;
+      .packages {
+        padding: 10px 100px;
+      }
+
+      .more .hello {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .more .hello .map {
+        flex: 0 0 60rem;
+        margin: 10px;
+      }
+      .more .hello .map iframe {
+        width: 100%;
+      }
+
+      #mas{
+        color: #ffa500;
+      }
+
+      .more .hello .he {
+        margin: 10px;
+        flex: 0 0 60rem;
+        padding: 2rem;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        background: #ffeded;
+        padding-inline-start: 16px;
+        width: 220px;
+        overflow: hidden;
+        transition: 0.6s;
+        transform: translate(0);
+        font-weight: 400;
+      }
+      .more .hello .he:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      .more .hello .he::before {
+        content: "";
+        position: absolute;
+        top: -75px;
+        z-index: -1;
+        left: -45px;
+        background: linear-gradient(
+          to right,
+          rgb(143, 6, 235),
+          rgb(193, 69, 255)
+        );
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        transition: 0.6s;
+      }
+      .more .hello .he:hover::before {
+        transform: scale(5.5);
+      }
+
+      .more .hello .he h1:hover {
+        font-size: 25px;
+      }
+
+      .more .hello .he h1 {
+        font-size: 20px;
+        padding-right: 15rem;
+      }
+      #mame {
+        accent-color: green;
+      }
+
+      @media (max-width: 1200px) {
+        html {
+          font-size: 55%;
         }
-      
-       
-.more .hello{
-  display: flex;
-  flex-wrap: wrap;
-}
-.more .hello .map{
-  flex:0 0 60rem;
-  margin: 10px;
-}
-.more .hello .map iframe{
-  width:100%;
-}
+        .more .hello .he h1 {
+          font-size: 17px;
+        }
+      }
 
-.more .hello .he{
-  margin: 10px;
-  flex:0 0 60rem;
-  padding:2rem;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-  border-radius: .5rem;
-  background: #ffeded;
-  padding-inline-start: 16px;
-  width: 220px;
-  overflow: hidden;
-  transition: .6s;
-  transform: translate(0);
-  font-weight: 400;
-}
-.more .hello .he:hover{
-  color: rgb(255, 255, 255);
-}
+      @media (max-width: 991px) {
+        header {
+          padding: 2rem;
+        }
 
-.more .hello .he::before{
-  content: '';
-  position: absolute;
-  top: -75px;
-  z-index: -1;
-  left: -45px ;
-  background: linear-gradient(to right, rgb(143, 6, 235),rgb(193, 69, 255));
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  transition: .6s;
-}
-.more .hello .he:hover::before{
-  transform: scale(5.5);
+        section {
+          padding: 2rem;
+        }
+        .more .hello .map {
+          flex: 0 0 55rem;
+        }
 
-}
+        .more .hello .he {
+          flex: 0 0 55rem;
+        }
+        .more .hello .he h1 {
+          font-size: 17px;
+        }
+        .more .hello .he:hover::before {
+          transform: scale(4.6);
+        }
+      }
 
-.more .hello .he h1:hover{
-    font-size:25px;
-}
+      @media (max-width: 768px) {
+        #menu-bar {
+          display: initial;
+        }
 
-.more .hello .he h1{
-  font-size: 20px;
-  padding-right: 15rem;
-}
-        #mame{
-        accent-color:green;
-       }
+        header .navbar {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          background: #333;
+          border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+          padding: 1rem 2rem;
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
 
-       @media (max-width:1200px){
+        header .navbar.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
 
-html{
-  font-size: 55%;
-}
-.more .hello .he h1{
-  font-size: 17px;
- }
-}
+        header .navbar a {
+          display: block;
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          margin: 1.5rem 0;
+          background: #222;
+        }
+        .more .hello .map {
+          flex: 0 0 47rem;
+        }
 
-@media (max-width:991px){
+        .more .hello .he {
+          flex: 0 0 47rem;
+        }
+        .more .hello .he h1 {
+          font-size: 17px;
+        }
+        .more .hello .he:hover::before {
+          transform: scale(3);
+        }
+      }
 
-header{
-  padding:2rem;
-}
+      @media (max-width: 450px) {
+        html {
+          font-size: 50%;
+        }
 
-section{
-  padding:2rem;
-}
-.more .hello .map{
-    flex: 0 0 55rem;
-}
+        .heading span {
+          font-size: 2.5rem;
+        }
 
-.more .hello .he{
-    flex:0 0 55rem;
-}
-.more .hello .he h1{
-  font-size: 17px;
- }
- .more .hello .he:hover::before{
-  transform: scale(4.6);
+        .contact .row form .inputBox input {
+          width: 100%;
+        }
+        .more .hello .map {
+          flex: 0 0 35rem;
+        }
 
- }
-
-}
-
-@media (max-width:768px){
-
-#menu-bar{
-  display: initial;
-}
-
-header .navbar{
-  position: absolute;
-  top:100%; right:0; left: 0;
-  background: #333;
-  border-top: .1rem solid rgba(255,255,255,.2);
-  padding:1rem 2rem;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-
-header .navbar.active{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-header .navbar a{
-  display: block;
-  border-radius: .5rem;
-  padding:1.5rem;
-  margin:1.5rem 0;    
-  background:#222;
-}
-.more .hello .map{
-    flex: 0 0 47rem;
-}
-
-.more .hello .he{
-    flex:0 0 47rem;
-}
-.more .hello .he h1{
-font-size: 17px;
-}
-.more .hello .he:hover::before{
-transform: scale(3);
-
-}
-}
-
-@media (max-width:450px){
-
-html{
-  font-size: 50%;
-}
-
-.heading span{
-  font-size: 2.5rem;
-}
-
-.contact .row form .inputBox input{
-  width:100%;
-}
-.more .hello .map{
-    flex: 0 0 35rem;
-}
-
-.more .hello .he{
-    flex:0 0 35rem;
-}
-#mas{
-        position:relative;
-        font-size: 100%;
-        color:#ffa500;
-    }
-    #mas2{
-        padding: 15px;
-    }
-    .more .hello .he h1{
-  font-size: 11px;
- }
- .more .hello .he h1:hover{
-    font-size:13px;
- }
-}
+        .more .hello .he {
+          flex: 0 0 35rem;
+        }
+        #mas {
+          position: relative;
+          font-size: 100%;
+        }
+        #mas2 {
+          padding: 15px;
+        }
+        .more .hello .he h1 {
+          font-size: 11px;
+        }
+        .more .hello .he h1:hover {
+          font-size: 13px;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
 
-        <div id="menu-bar" class="fas fa-bars"></div>
-    
-        <a href="#" class="logo"><span>Safer</span>per</a>
-    
-        <nav class="navbar">
-            <a href="index.html">home</a>
-            <a href="index.html">book</a>
-            <a href="index.html">packages</a>
-            <a href="index.html">services</a>
-            <a href="index.html">gallery</a>
-            <a href="index.html">review</a>
-            <a href="index.html">contact</a>
-        </nav>
-    
-        <div class="icons">
-            <i class="fas fa-search" id="search-btn"></i>
-            <i class="fas fa-user" id="login-btn"></i>
-        </div>
-    
-        <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="search here...">
-            <label for="search-bar" class="fas fa-search"></label>
-        </form>
-    
+      <a href="#" class="logo"><span>Safer</span>per</a>
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="index.html">book</a>
+        <a href="index.html">packages</a>
+        <a href="index.html">services</a>
+        <a href="index.html">gallery</a>
+        <a href="index.html">contact</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here..." />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
     </header>
     <!-- header section ends -->
 
-<!-- login form container  -->
+    <!-- login form container  -->
 
+    <div class="login-form-container">
+      <i class="fas fa-times" id="form-close"></i>
 
-<div class="login-form-container">
-
-    <i class="fas fa-times" id="form-close"></i>
-
-    <form action="Login.php" method="post" onsubmit="return log()" name="form1" id="f1">
+      <form
+        action="Login.php"
+        method="post"
+        onsubmit="return log()"
+        name="form1"
+        id="f1"
+      >
         <h3>login</h3>
-      
-        <input type="email" class="box" placeholder="enter your email" name="email" required>
-        <input type="password" class="box" placeholder="enter your password" name="password" required>
-        <input type="submit" value="login now" class="btn" name="login">
-        <input type="checkbox" id="remember">
+
+        <input
+          type="email"
+          class="box"
+          placeholder="enter your email"
+          name="email"
+          required
+        />
+        <input
+          type="password"
+          class="box"
+          placeholder="enter your password"
+          name="password"
+          required
+        />
+        <input type="submit" value="login now" class="btn" name="login" />
+        <input type="checkbox" id="remember" />
         <label for="remember">remember me</label>
-       <!-- <p>forget password? <a href="#">click here</a></p>-->
+        <!-- <p>forget password? <a href="#">click here</a></p>-->
         <p>don't have any account? <a href="register.html">register now</a></p>
-    </form>
-
-</div>
-
-<!--Pakages 1 details start-->
-<section class="packages" style="padding-top: 100px;" id="mas2">
-
-    <div class="box-container" >
-
-<div class="box">
-    <img src="images/11.webp" alt="" width="300px" height="300px">
-    <img src="images/22.jpg" alt="" width="300px" height="300px">
-    <div class="content">
-    <h3><i class="fas fa-map-marker-alt"></i> Louvre Museum</h3>
-    <p>The Louvre, or the Louvre Museum, is the world's most-visited museum,
-         France. It is the home of some of the best-known works of art, including the Mona Lisa and the Venus de Milo.  </p>
-    <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
+      </form>
     </div>
-</div>
-<a href="#book" class="btn">Book Now</a>
 
-</div>
-
-    <div class="box">
-        <img src="images/eiffel-tower-night_2x3.avif" alt="" width="300px" height="300px">
-        <img src="images/33.jpg" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Eiffel Tower</h3>
-        <p>The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France.
-             It is named after the engineer Gustave Eiffel, whose company designed and built the tower.</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+    <!--Pakages 1 details start-->
+    <section class="packages" style="padding-top: 100px" id="mas2">
+      <div class="box-container">
+        <div class="box">
+          <img src="images/11.webp" alt="" width="300px" height="300px" />
+          <img src="images/22.jpg" alt="" width="300px" height="300px" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Louvre Museum</h3>
+            <p>
+              The Louvre, or the Louvre Museum, is the world's most-visited
+              museum, France. It is the home of some of the best-known works of
+              art, including the Mona Lisa and the Venus de Milo.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/Arc .webp" alt="" width="300px" height="300px">
-        <img src="images/Place-Arc.webp" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Arc de Triomphe</h3>
-        <p>The Arc de Triomphe de l'Étoile is one of the most famous monuments in Paris, France, 
-            standing at the western end of the Champs-Élysées at the centre of Place Charles de Gaulle</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img
+            src="images/eiffel-tower-night_2x3.avif"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <img src="images/33.jpg" alt="" width="300px" height="300px" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Eiffel Tower</h3>
+            <p>
+              The Eiffel Tower is a wrought-iron lattice tower on the Champ de
+              Mars in Paris, France. It is named after the engineer Gustave
+              Eiffel, whose company designed and built the tower.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/Paris.webp" alt="" width="300px" height="300px">
-        <img src="images/Luxembourg-Gardens-.jpg" alt=""width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Luxembourg Gardens</h3>
-        <p>The Jardin du Luxembourg, known in English as the Luxembourg Garden, colloquially referred to as the Jardin du Sénat, 
-            is located in the 6th arrondissement of Paris, France.</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img src="images/Arc .webp" alt="" width="300px" height="300px" />
+          <img
+            src="images/Place-Arc.webp"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Arc de Triomphe</h3>
+            <p>
+              The Arc de Triomphe de l'Étoile is one of the most famous
+              monuments in Paris, France, standing at the western end of the
+              Champs-Élysées at the centre of Place Charles de Gaulle
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/prv.jpg" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Sainte-Chapelle</h3>
-        <p>The Sainte-Chapelle is a royal chapel in the Gothic style, within the medieval Palais de la Cité. </p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img src="images/Paris.webp" alt="" width="300px" height="300px" />
+          <img
+            src="images/Luxembourg-Gardens-.jpg"
+            alt=""
+            width="300px"
+            height="300px"
+          />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Luxembourg Gardens</h3>
+            <p>
+              The Jardin du Luxembourg, known in English as the Luxembourg
+              Garden, colloquially referred to as the Jardin du Sénat, is
+              located in the 6th arrondissement of Paris, France.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="index.html" class="btn">Book Now</a>
 
-    </div>
-
-    <div class="box">
-        <img src="images/a.jpg" alt="" width="300px" height="300px">
-        <div class="content">
-        <h3><i class="fas fa-map-marker-alt"></i> Cathédrale Notre-Dame de Paris</h3>
-        <p>Notre-Dame de Paris referred to simply as Notre-Dame, is a medieval Catholic cathedral on the Île de la Cité in the 4th arrondissement of Paris.</p>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
+        <div class="box">
+          <img src="images/prv.jpg" alt="" width="300px" height="300px" />
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i> Sainte-Chapelle</h3>
+            <p>
+              The Sainte-Chapelle is a royal chapel in the Gothic style, within
+              the medieval Palais de la Cité.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="index.html" class="btn">Book Now</a>
         </div>
-    </div>
-    <a href="#book" class="btn">Book Now</a>
 
-    </div>
-</div>
-</section>
-<section class="book" id="book">
-
-    <h1 class="heading">
+        <div class="box">
+          <img src="images/a.jpg" alt="" width="300px" height="300px" />
+          <div class="content">
+            <h3>
+              <i class="fas fa-map-marker-alt"></i> Cathédrale Notre-Dame de
+              Paris
+            </h3>
+            <p>
+              Notre-Dame de Paris referred to simply as Notre-Dame, is a
+              medieval Catholic cathedral on the Île de la Cité in the 4th
+              arrondissement of Paris.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <a href="#book" class="btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+    <section class="book" id="book">
+      <h1 class="heading">
         <span>b</span>
         <span>o</span>
         <span>o</span>
@@ -371,129 +412,178 @@ html{
         <span>n</span>
         <span>o</span>
         <span>w</span>
-    </h1>
+      </h1>
 
-    <div class="row">
-
+      <div class="row">
         <div class="image">
-            <img src="images/book-img.svg" alt="">
+          <img src="images/book-img.svg" alt="" />
         </div>
 
-        <form action="Book now.php" method="post" name="form2" onsubmit="return book()" >
-            <div class="inputBox" >
-                <h3>Your Location</h3>
-                <input type="text" placeholder="Journey start point" name="location" required>
-            </div>
-            <div class="inputBox" >
-                <h3>Destiny</h3>
-                <input type="text" placeholder="Favourite point" name="Whereto" required>
-            </div>
-            <div class="inputBox">
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests" name="Howmany" required>
-            </div>
-            <div class="inputBox">
-                <h3>AADHAR Number</h3>
-                <input type="number" placeholder="aadhar card number" name="aadhar" required>
-            </div>
-            <div class="inputBox">
-                <h3>arrivals</h3>
-                <input type="date" name="Arrivals" required>
-            </div>
-            <div class="inputBox">
-                <h3>leaving</h3>
-                <input type="date" name="Leaving" required> 
-                </div>
-            <input type="submit" class="btn" value="book now">
+        <form
+          action="Book now.php"
+          method="post"
+          name="form2"
+          onsubmit="return book()"
+        >
+          <div class="inputBox">
+            <h3>Your Location</h3>
+            <input
+              type="text"
+              placeholder="Journey start point"
+              name="location"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>Destiny</h3>
+            <input
+              type="text"
+              placeholder="Favourite point"
+              name="Whereto"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>how many</h3>
+            <input
+              type="number"
+              placeholder="number of guests"
+              name="Howmany"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>AADHAR Number</h3>
+            <input
+              type="number"
+              placeholder="aadhar card number"
+              name="aadhar"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <h3>arrivals</h3>
+            <input type="date" name="Arrivals" required />
+          </div>
+          <div class="inputBox">
+            <h3>leaving</h3>
+            <input type="date" name="Leaving" required />
+          </div>
+          <input type="submit" class="btn" value="book now" />
         </form>
-
-    </div>
-</section>
-<section class="more">
-<h1 class="heading" >
-    <span>M</span>
-    <span>o</span>
-    <span>r</span>
-    <span>e</span>
-    <span class="space"></span>
-    <span>p</span>
-    <span>l</span>
-    <span>a</span>
-    <span>c</span>
-    <span>e</span>
-</h1>
-<div class="hello" >
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.9185124463!2d2.347035!3d48.85885484999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sin!4v1676566952391!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+      </div>
+    </section>
+    <section class="more">
+      <h1 class="heading">
+        <span>M</span>
+        <span>o</span>
+        <span>r</span>
+        <span>e</span>
+        <span class="space"></span>
+        <span>p</span>
+        <span>l</span>
+        <span>a</span>
+        <span>c</span>
+        <span>e</span>
+      </h1>
+      <div class="hello">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.9185124463!2d2.347035!3d48.85885484999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2sin!4v1676566952391!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
         <div class="he">
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Luxembourg Gardens</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Galeries Lafayette Haussmann</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Palace of Versailles</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i>  Pont Alexandre III</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Notre-Dame Cathedral</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Palais Garnier</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Parc des Buttes-Chaumont</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Louvre Museum</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Eiffel Tower</h1>
-    <br>
-    <h1 style="color: rgb(22, 21, 21);cursor: pointer;"><i class="fas fa-map-marker-alt" id="mas"></i> Louis Vuitton Foundation</h1>
-</div>
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Luxembourg Gardens
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Galeries Lafayette
+            Haussmann
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Palace of Versailles
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Pont Alexandre III
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Notre-Dame Cathedral
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Palais Garnier
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Parc des
+            Buttes-Chaumont
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Louvre Museum
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Eiffel Tower
+          </h1>
+          <br />
+          <h1 style="color: rgb(22, 21, 21); cursor: pointer">
+            <i class="fas fa-map-marker-alt" id="mas"></i> Louis Vuitton
+            Foundation
+          </h1>
+        </div>
+      </div>
+    </section>
 
-</div>
-
-</section>
-
-<section class="footer">
-
-    <div class="box-container">
-
+    <section class="footer">
+      <div class="box-container">
         <div class="box">
-            <h3>about us</h3>
-            <p>Customer Support, Payment Security, Privacy Policy, User Agreement, Terms of Service, More Offices, Make A Payment, Work From Home</p>
+          <h3>about us</h3>
+          <p>
+            Customer Support, Payment Security, Privacy Policy, User Agreement,
+            Terms of Service, More Offices, Make A Payment, Work From Home
+          </p>
         </div>
         <div class="box">
-            <h3>Our Address</h3>
-            <a href="#"><i class="fas fa-map"></i> Rajasthan,india</a>
-            <a href="#"><i class="fas fa-phone"></i> 8955921898</a>
-            <a href="#"><i class="fas fa-envelope"></i> khushalmdeora@gmail.com</a>
+          <h3>Our Address</h3>
+          <a href="#"><i class="fas fa-map"></i> Rajasthan,india</a>
+          <a href="#"><i class="fas fa-phone"></i> 8955921898</a>
+          <a href="#"
+            ><i class="fas fa-envelope"></i> khushalmdeora@gmail.com</a
+          >
         </div>
         <div class="box">
-            <h3>quick links</h3>
-            <a href="index.html">home</a>
-            <a href="index.html">book</a>
-            <a href="index.html">packages</a>
-            <a href="index.html">services</a>
-            <a href="index.html">gallery</a>
-            <a href="index.html">review</a>
-            <a href="index.html">contact</a>
+          <h3>quick links</h3>
+          <a href="index.html">home</a>
+          <a href="index.html">book</a>
+          <a href="index.html">packages</a>
+          <a href="index.html">services</a>
+          <a href="index.html">gallery</a>
+          <a href="index.html">contact</a>
         </div>
         <div class="box">
-            <h3>follow us</h3>
-            <a href="#">facebook</a>
-            <a href="#">instagram</a>
-            <a href="#">twitter</a>
-            <a href="#">linkedin</a>
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">instagram</a>
+          <a href="#">twitter</a>
+          <a href="#">linkedin</a>
         </div>
+      </div>
 
-    </div>
+      <h1 class="credit">created by <span> mr. khushal Deora </span></h1>
+    </section>
 
-    <h1 class="credit"> created by <span> mr. khushal Deora </span></h1>
-
-</section>
-
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="script2.js"></script>
-</body>
+    <!-- custom js file link  -->
+    <script src="script2.js"></script>
+  </body>
 </html>

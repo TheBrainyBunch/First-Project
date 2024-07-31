@@ -279,20 +279,6 @@ header .search-bar-container label:hover{
   top:10rem;
 }
 
-/* .home .controls .vid-btn{
-  height:2rem;
-  width:2rem;
-  display: inline-block;
-  border-radius: 50%;
-  background:#fff;
-  cursor: pointer;
-  margin:0 .5rem;
-}
-
-.home .controls .vid-btn.active{
-  background:var(--orange);
-} */
-
 .book .row{
   display: flex;
   flex-wrap: wrap;
@@ -471,41 +457,6 @@ header .search-bar-container label:hover{
   padding:.5rem 0;
 }
 
-.review .review-slider{
-  padding-bottom: 2rem;
-}
-
-.review .box{
-  padding:2rem;
-  text-align: center;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-  border-radius: .5rem;
-}
-
-.review .box img{
-  height:13rem;
-  width:13rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.review .box h3{
-  color:#333;
-  font-size: 2.5rem;
-}
-
-.review .box p{
-  color:#666;
-  font-size: 1.5rem;
-  padding:1rem 0;
-}
-
-.review .box .stars i{
-  color:var(--orange);
-  font-size: 1.7rem;
-}
-
 .contact .row{
   display: flex;
   flex-wrap: wrap;
@@ -607,54 +558,6 @@ header .search-bar-container label:hover{
   color:var(--orange);
 }
 
-/* chat box
-.chat-icon{
-  position:fixed;
-  right: 30px;
-  bottom: 0px;
-  font-size: 60px;
-  color:var(--orange);
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.chat-box{
-  position: fixed;
-  right: 20px;
-  bottom: 100px;
-  width: 350px;
-  height: 78vh;
-  background: rgb(0, 0, 0); 
-  z-index: 1000;
-  transition: all 0.3s ease-out;
-  transform: scaleY(0);
-}
-
-.chat-box.active{
-  transform: scaleY(1);
-
-}
-
-.hidden{
-  display:none !important;
-
-}
-
-.hidden{
-  height: 30px;
-  overflow: hidden;
-  resize: none;
-}
-
-#messages{
-  padding:6px ;
-} */
-
-
-
-
-
-
 
 
 
@@ -671,9 +574,6 @@ header .search-bar-container label:hover{
   html{
     font-size: 55%;
   }
-  /* .more .hello .he h1{
-    font-size: 19px;
-   } */
 }
 
 @media (max-width:991px){
@@ -685,14 +585,6 @@ header .search-bar-container label:hover{
   section{
     padding:2rem;
   }
-  /* .more .hello .he h1{
-    font-size: 19px;
-   }
-   .more .hello .he:hover::before{
-    transform: scale(4.6);
-  
-   } */
-
 }
 
 @media (max-width:768px){
@@ -721,29 +613,19 @@ header .search-bar-container label:hover{
     margin:1.5rem 0;    
     background:#222;
   }
- /* .more .hello .he h1{
-  font-size: 17px;
- }
- .more .hello .he:hover::before{
-  transform: scale(4.5);
-
- } */
 }
 
 @media (max-width:450px){
 
   html{
     font-size: 50%;
-  }
-  .home{
-    padding: 0 10px;
-  }
+}
 
-  .heading span{
+.heading span{
     font-size: 2.5rem;
-  }
+}
 
-  .contact .row form .inputBox input{
+.contact .row form .inputBox input{
     width:100%;
-  }
+}
 }

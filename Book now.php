@@ -3,7 +3,7 @@
 </head>
 <body>
 <?php
-$con=mysqli_connect("localhost","root","@khushalmdeora#009","khushal");
+$con=mysqli_connect("","","","");
 if(!$con){
 die("Connection failed:" .mysqli_connect_error());
 }
